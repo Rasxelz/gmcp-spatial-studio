@@ -1,0 +1,5 @@
+id,NAME,TYPE,LotNum,ST_NUM,ST_NAME,FULL_AD,CITY,STATE,ZIP,LAT,LONG
+AP_VAL_01,Rumah Contoh Valid A1,House,Lot 1,1.0,Jl. Bougenville Blok A,Jl. Bougenville Blok A No.1,Jakarta Utara,DKI Jakarta,14470,-6.0825,106.7343
+AP_ERR_OFFSHORE,Gerbang Dermaga Barat,Gate,Lot 99,99.0,Jl. Dermaga Barat,Jl. Dermaga Barat No.99,Jakarta Utara,DKI Jakarta,14470,-6.081,106.73
+AP_ERR_NO_NUM,Rumah Tanpa Nomor,House,Lot 2,,Jl. Bougenville Blok A,Jl. Bougenville Blok A,Jakarta Utara,DKI Jakarta,14470,-6.0828,106.7343
+AP_WARN_ORPHAN,Pos Sekuriti Timur,Gate,,0.0,Jl. Bougenville Raya,Jl. Bougenville Raya Pos 1,Jakarta Utara,DKI Jakarta,14470,-6.0835,106.736

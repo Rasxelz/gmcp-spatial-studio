@@ -1,0 +1,5 @@
+id,APN,NAME,LotNum,ST_NUM,ST_NAME,FULL_AD,CITY,STATE,ZIP,TYPE,CATEG,corner1_lat,corner1_lon,corner2_lat,corner2_lon,corner3_lat,corner3_lon,corner4_lat,corner4_lon
+P_VAL_01,PARCEL-A01,Kavling A1 Valid,Lot 1,1,Jl. Bougenville Blok A,Jl. Bougenville Blok A No.1,Jakarta Utara,DKI Jakarta,14470,Parcel,Residential,-6.0824,106.7342,-6.0824,106.7345,-6.0826,106.7345,-6.0826,106.7342
+P_ERR_DUP_APN,PARCEL-A01,Kavling Duplikat APN,Lot 2,2,Jl. Bougenville Blok A,Jl. Bougenville Blok A No.2,Jakarta Utara,DKI Jakarta,14470,Parcel,Residential,-6.0827,106.7342,-6.0827,106.7345,-6.0829,106.7345,-6.0829,106.7342
+P_ERR_OVERLAP,PARCEL-A03,Kavling Menimpa A1,Lot 3,3,Jl. Bougenville Blok A,Jl. Bougenville Blok A No.3,Jakarta Utara,DKI Jakarta,14470,Parcel,Residential,-6.0825,106.7343,-6.0825,106.7346,-6.0827,106.7346,-6.0827,106.7343
+P_ERR_DEGENERATE,PARCEL-A04,Kavling Cuma 2 Sudut,Lot 4,4,Jl. Bougenville Blok A,Jl. Bougenville Blok A No.4,Jakarta Utara,DKI Jakarta,14470,Parcel,Residential,-6.083,106.7342,-6.083,106.7345,,,,

@@ -1,0 +1,4 @@
+id,ST_NAME,RT_NAME,CITY,ADMIN,POSTAL,SURFACE,SPEED_LM,BIKE,CAR_RESTR,PED_RESTR,DIR,SEPARATE,point1_lat,point1_lon,point2_lat,point2_lon
+R_VAL_01,Jl. Bougenville Utama,Jl. Bougenville Utama Seg 1,Jakarta Utara,DKI Jakarta,14470,Paved,40 KPH,Non-applicable,Allowed,Allowed,Bi-Directional,N,-6.082,106.734,-6.0835,106.734
+R_ERR_CROSSING,Jl. Tembus Liar,Jl. Tembus Liar Seg 1,Jakarta Utara,DKI Jakarta,14470,Paved,30 KPH,Non-applicable,Allowed,Allowed,Bi-Directional,N,-6.0823,106.7341,-6.0827,106.7346
+R_WARN_NO_BIKE,Jl. Gang Buntu,Jl. Gang Buntu Seg 1,Jakarta Utara,DKI Jakarta,14470,Paved,20 KPH,,Allowed,Allowed,Bi-Directional,N,-6.083,106.7348,-6.0833,106.7352

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="PIK2_Survey_Field" id="PIK2_Survey_Field">
+	<SimpleField name="id" type="string"></SimpleField>
+	<SimpleField name="APN" type="string"></SimpleField>
+	<SimpleField name="LotNum" type="string"></SimpleField>
+	<SimpleField name="ST_NUM" type="string"></SimpleField>
+	<SimpleField name="ST_NAME" type="string"></SimpleField>
+	<SimpleField name="FULL_AD" type="string"></SimpleField>
+	<SimpleField name="CITY" type="string"></SimpleField>
+	<SimpleField name="STATE" type="string"></SimpleField>
+	<SimpleField name="ZIP" type="string"></SimpleField>
+	<SimpleField name="TYPE" type="string"></SimpleField>
+	<SimpleField name="CATEG" type="string"></SimpleField>
+	<SimpleField name="corner1_lat" type="float"></SimpleField>
+	<SimpleField name="corner1_lon" type="float"></SimpleField>
+	<SimpleField name="corner2_lat" type="float"></SimpleField>
+	<SimpleField name="corner2_lon" type="float"></SimpleField>
+	<SimpleField name="corner3_lat" type="float"></SimpleField>
+	<SimpleField name="corner3_lon" type="float"></SimpleField>
+	<SimpleField name="corner4_lat" type="float"></SimpleField>
+	<SimpleField name="corner4_lon" type="float"></SimpleField>
+</Schema>
+<Folder><name>PIK2_Survey_Field</name>
+  <Placemark id="PIK2_Survey_Field.1">
+	<name>Kavling A1 Valid</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#PIK2_Survey_Field">
+		<SimpleData name="id">P_VAL_01</SimpleData>
+		<SimpleData name="APN">PARCEL-A01</SimpleData>
+		<SimpleData name="LotNum">Lot 1</SimpleData>
+		<SimpleData name="ST_NUM">1</SimpleData>
+		<SimpleData name="ST_NAME">Jl. Bougenville Blok A</SimpleData>
+		<SimpleData name="FULL_AD">Jl. Bougenville Blok A No.1</SimpleData>
+		<SimpleData name="CITY">Jakarta Utara</SimpleData>
+		<SimpleData name="STATE">DKI Jakarta</SimpleData>
+		<SimpleData name="ZIP">14470</SimpleData>
+		<SimpleData name="TYPE">Parcel</SimpleData>
+		<SimpleData name="CATEG">Residential</SimpleData>
+		<SimpleData name="corner1_lat">-6.0824</SimpleData>
+		<SimpleData name="corner1_lon">106.7342</SimpleData>
+		<SimpleData name="corner2_lat">-6.0824</SimpleData>
+		<SimpleData name="corner2_lon">106.7345</SimpleData>
+		<SimpleData name="corner3_lat">-6.0826</SimpleData>
+		<SimpleData name="corner3_lon">106.7345</SimpleData>
+		<SimpleData name="corner4_lat">-6.0826</SimpleData>
+		<SimpleData name="corner4_lon">106.7342</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><outerBoundaryIs><LinearRing><coordinates>106.7342,-6.0824 106.7345,-6.0824 106.7345,-6.0826 106.7342,-6.0826 106.7342,-6.0824</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark id="PIK2_Survey_Field.2">
+	<name>Kavling Duplikat APN</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#PIK2_Survey_Field">
+		<SimpleData name="id">P_ERR_DUP_APN</SimpleData>
+		<SimpleData name="APN">PARCEL-A01</SimpleData>
+		<SimpleData name="LotNum">Lot 2</SimpleData>
+		<SimpleData name="ST_NUM">2</SimpleData>
+		<SimpleData name="ST_NAME">Jl. Bougenville Blok A</SimpleData>
+		<SimpleData name="FULL_AD">Jl. Bougenville Blok A No.2</SimpleData>
+		<SimpleData name="CITY">Jakarta Utara</SimpleData>
+		<SimpleData name="STATE">DKI Jakarta</SimpleData>
+		<SimpleData name="ZIP">14470</SimpleData>
+		<SimpleData name="TYPE">Parcel</SimpleData>
+		<SimpleData name="CATEG">Residential</SimpleData>
+		<SimpleData name="corner1_lat">-6.0827</SimpleData>
+		<SimpleData name="corner1_lon">106.7342</SimpleData>
+		<SimpleData name="corner2_lat">-6.0827</SimpleData>
+		<SimpleData name="corner2_lon">106.7345</SimpleData>
+		<SimpleData name="corner3_lat">-6.0829</SimpleData>
+		<SimpleData name="corner3_lon">106.7345</SimpleData>
+		<SimpleData name="corner4_lat">-6.0829</SimpleData>
+		<SimpleData name="corner4_lon">106.7342</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><outerBoundaryIs><LinearRing><coordinates>106.7342,-6.0827 106.7345,-6.0827 106.7345,-6.0829 106.7342,-6.0829 106.7342,-6.0827</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark id="PIK2_Survey_Field.3">
+	<name>Kavling Menimpa A1</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#PIK2_Survey_Field">
+		<SimpleData name="id">P_ERR_OVERLAP</SimpleData>
+		<SimpleData name="APN">PARCEL-A03</SimpleData>
+		<SimpleData name="LotNum">Lot 3</SimpleData>
+		<SimpleData name="ST_NUM">3</SimpleData>
+		<SimpleData name="ST_NAME">Jl. Bougenville Blok A</SimpleData>
+		<SimpleData name="FULL_AD">Jl. Bougenville Blok A No.3</SimpleData>
+		<SimpleData name="CITY">Jakarta Utara</SimpleData>
+		<SimpleData name="STATE">DKI Jakarta</SimpleData>
+		<SimpleData name="ZIP">14470</SimpleData>
+		<SimpleData name="TYPE">Parcel</SimpleData>
+		<SimpleData name="CATEG">Residential</SimpleData>
+		<SimpleData name="corner1_lat">-6.0825</SimpleData>
+		<SimpleData name="corner1_lon">106.7343</SimpleData>
+		<SimpleData name="corner2_lat">-6.0825</SimpleData>
+		<SimpleData name="corner2_lon">106.7346</SimpleData>
+		<SimpleData name="corner3_lat">-6.0827</SimpleData>
+		<SimpleData name="corner3_lon">106.7346</SimpleData>
+		<SimpleData name="corner4_lat">-6.0827</SimpleData>
+		<SimpleData name="corner4_lon">106.7343</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><outerBoundaryIs><LinearRing><coordinates>106.7343,-6.0825 106.7346,-6.0825 106.7346,-6.0827 106.7343,-6.0827 106.7343,-6.0825</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+</Folder>
+</Document></kml>

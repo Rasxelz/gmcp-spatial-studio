@@ -1,0 +1,10 @@
+{
+"type": "FeatureCollection",
+"name": "RoadCenterlines",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": "R_VAL_01", "ST_NAME": "Jl. Bougenville Utama", "RT_NAME": "Jl. Bougenville Utama Seg 1", "CITY": "Jakarta Utara", "ADMIN": "DKI Jakarta", "POSTAL": 14470, "SURFACE": "Paved", "SPEED_LM": "40 KPH", "BIKE": "Non-applicable", "CAR_RESTR": "Allowed", "PED_RESTR": "Allowed", "DIR": "Bi-Directional", "SEPARATE": "N", "point1_lat": -6.082, "point1_lon": 106.734, "point2_lat": -6.0835, "point2_lon": 106.734 }, "geometry": { "type": "LineString", "coordinates": [ [ 106.734, -6.082 ], [ 106.734, -6.0835 ] ] } },
+{ "type": "Feature", "properties": { "id": "R_ERR_CROSSING", "ST_NAME": "Jl. Tembus Liar", "RT_NAME": "Jl. Tembus Liar Seg 1", "CITY": "Jakarta Utara", "ADMIN": "DKI Jakarta", "POSTAL": 14470, "SURFACE": "Paved", "SPEED_LM": "30 KPH", "BIKE": "Non-applicable", "CAR_RESTR": "Allowed", "PED_RESTR": "Allowed", "DIR": "Bi-Directional", "SEPARATE": "N", "point1_lat": -6.0823, "point1_lon": 106.7341, "point2_lat": -6.0827, "point2_lon": 106.7346 }, "geometry": { "type": "LineString", "coordinates": [ [ 106.7341, -6.0823 ], [ 106.7346, -6.0827 ] ] } },
+{ "type": "Feature", "properties": { "id": "R_WARN_NO_BIKE", "ST_NAME": "Jl. Gang Buntu", "RT_NAME": "Jl. Gang Buntu Seg 1", "CITY": "Jakarta Utara", "ADMIN": "DKI Jakarta", "POSTAL": 14470, "SURFACE": "Paved", "SPEED_LM": "20 KPH", "BIKE": null, "CAR_RESTR": "Allowed", "PED_RESTR": "Allowed", "DIR": "Bi-Directional", "SEPARATE": "N", "point1_lat": -6.083, "point1_lon": 106.7348, "point2_lat": -6.0833, "point2_lon": 106.7352 }, "geometry": { "type": "LineString", "coordinates": [ [ 106.7348, -6.083 ], [ 106.7352, -6.0833 ] ] } }
+]
+}
