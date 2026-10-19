@@ -300,8 +300,8 @@ if st.session_state.layers is not None:
     @st.dialog("⚠️ Konfirmasi Ekspor GMCP Package")
     def confirm_export_dialog():
         if not st.session_state.download_finished:
-            st.write(f"Sistem mendeteksi **{total_count} catatan anomali** (termasuk **{crit_count} Critical Issue**)[cite: 10].")
-            st.info("Format Shapefile suite tetap dapat diunduh lengkap beserta lampiran audit resmi `GMCP_AUDIT_REPORT.csv`[cite: 10].")
+            st.write(f"Sistem mendeteksi **{total_count} catatan anomali** (termasuk **{crit_count} Critical Issue**).")
+            st.info("Format Shapefile suite tetap dapat diunduh lengkap beserta lampiran audit resmi `GMCP_AUDIT_REPORT.csv`.")
             zip_bytes = create_shapefile_submission_zip(layers, flags_df)
             
             def mark_download_complete():
