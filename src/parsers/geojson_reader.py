@@ -1,14 +1,5 @@
 """
 GeoJSON / JSON reader untuk pipeline spasial GMCP.
-
-Membaca berkas ``.geojson`` atau ``.json`` menjadi kamus (dictionary) berisi
-GeoDataFrame standar GMCP dengan empat lapisan kanonik:
-    - AddressPoints
-    - Parcels
-    - RoadCenterlines
-    - CommunityBoundary
-
-Seluruh GeoDataFrame dinormalisasi ke CRS WGS84 (EPSG:4326).
 """
 
 import os
@@ -20,14 +11,12 @@ TARGET_CRS = "EPSG:4326"
 
 
 def _empty_layers() -> dict:
-    """Membuat kerangka kamus GMCP dengan GeoDataFrame kosong ber-CRS 4326."""
     return {
         name: gpd.GeoDataFrame(geometry=[], crs=TARGET_CRS) for name in GMCP_LAYERS
     }
 
 
 def _normalize_crs(gdf: gpd.GeoDataFrame) -> gpd.GeoDataFrame:
-    """Memastikan GeoDataFrame memiliki/diproyeksikan ke EPSG:4326."""
     if gdf is None:
         return gpd.GeoDataFrame(geometry=[], crs=TARGET_CRS)
     if len(gdf) == 0:
@@ -40,20 +29,14 @@ def _normalize_crs(gdf: gpd.GeoDataFrame) -> gpd.GeoDataFrame:
 
 
 def _detect_layer_name(source, data: dict, explicit_filename: str = None, gdf: gpd.GeoDataFrame = None) -> str:
-    """
-    Menentukan nama lapisan GMCP berdasarkan hirarki:
-    1. Properti 'name' pada FeatureCollection GeoJSON.
-    2. Nama berkas (dari string path, parameter explicit, atau atribut upload Streamlit).
-    3. Tipe geometri spasial (Fallback otomatis).
-    """
-    # 1. Properti "name" pada FeatureCollection
+    # 1. Properti name di FeatureCollection
     fc_name = (data or {}).get("name")
     if isinstance(fc_name, str):
         for layer in GMCP_LAYERS:
             if layer.lower() == fc_name.lower():
                 return layer
 
-    # 2. Ekstrak nama berkas dari parameter atau objek buffer
+    # 2. Cek nama berkas
     candidate_name = explicit_filename
     if not candidate_name and isinstance(source, (str, os.PathLike)):
         candidate_name = os.path.basename(str(source))
@@ -71,7 +54,7 @@ def _detect_layer_name(source, data: dict, explicit_filename: str = None, gdf: g
         if "bound" in stem or "community" in stem:
             return "CommunityBoundary"
 
-    # 3. Fallback: Deteksi otomatis dari tipe geometri jika nama berkas tidak memuat kata kunci
+    # 3. Fallback: tipe geometri
     if gdf is not None and not gdf.empty and 'geometry' in gdf:
         geom_types = gdf.geometry.geom_type.dropna().unique()
         if any("Point" in gt for gt in geom_types):
@@ -85,19 +68,7 @@ def _detect_layer_name(source, data: dict, explicit_filename: str = None, gdf: g
 
 
 def parse_geojson_gmcp(file_source, filename: str = None, **kwargs) -> dict:
-    """
-    Membaca satu berkas GeoJSON/JSON menjadi kamus GeoDataFrame standar GMCP.
-
-    Parameters
-    ----------
-    file_source : str | os.PathLike | file-like
-        Path berkas atau buffer file uploader Streamlit.
-    filename : str, optional
-        Nama berkas asli untuk membantu identifikasi layer.
-    """
     result = _empty_layers()
-
-    # Baca metadata JSON untuk mendeteksi nama lapisan
     raw_json = None
     try:
         if isinstance(file_source, (str, os.PathLike)):
@@ -111,7 +82,6 @@ def parse_geojson_gmcp(file_source, filename: str = None, **kwargs) -> dict:
     except Exception:
         raw_json = None
 
-    # Reset pointer buffer sebelum dibaca oleh GeoPandas
     if hasattr(file_source, "seek"):
         file_source.seek(0)
 
